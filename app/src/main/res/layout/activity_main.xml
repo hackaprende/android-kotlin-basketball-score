@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="16dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
             <ImageButton
                 android:id="@+id/restart_button"
@@ -51,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="center"
-            android:paddingTop="16dp"
             android:paddingStart="16dp"
+            android:paddingTop="16dp"
             android:paddingEnd="16dp"
             android:text="@string/local"
             android:textColor="@color/text_black"
@@ -65,9 +65,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:paddingBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
             android:text="@string/visitor"
             android:textColor="@color/text_black"
             android:textSize="32sp"
@@ -96,17 +96,30 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text="@string/zero"
                 android:textColor="@color/text_black"
                 android:textSize="72sp"
-                android:text="@string/zero"
                 tools:text="62" />
 
-            <Button
-                android:id="@+id/local_plus_button"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plus_one"
-                android:textSize="24sp" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/local_plus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plus_one"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/local_two_points_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plus_two"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -133,17 +146,30 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text="@string/zero"
                 android:textColor="@color/text_black"
                 android:textSize="72sp"
-                android:text="@string/zero"
                 tools:text="48" />
 
-            <Button
-                android:id="@+id/visitor_plus_button"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plus_one"
-                android:textSize="24sp" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/visitor_plus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plus_one"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/visitor_two_points_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plus_two"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -16,45 +16,59 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val localScoreText = binding.localScoreText
-        val visitorScoreText = binding.visitorScoreText
-        setupClickListeners(localScoreText, visitorScoreText)
+        setupClickListeners()
     }
 
-    private fun setupClickListeners(localScoreText: TextView, visitorScoreText: TextView) {
+    private fun setupClickListeners() {
         binding.localMinusButton.setOnClickListener {
             if (localScore > 0) {
                 localScore--
-                localScoreText.text = localScore.toString()
+                binding.localScoreText.text = localScore.toString()
             }
         }
 
         binding.localPlusButton.setOnClickListener {
-            localScore++
-            localScoreText.text = localScore.toString()
+            addPointsToScore(1, isLocal = true)
+        }
+
+        binding.localTwoPointsButton.setOnClickListener {
+            addPointsToScore(2, isLocal = true)
         }
 
         binding.visitorMinusButton.setOnClickListener {
             if (visitorScore > 0) {
                 visitorScore--
-                visitorScoreText.text = visitorScore.toString()
+                binding.visitorScoreText.text = visitorScore.toString()
             }
         }
 
         binding.visitorPlusButton.setOnClickListener {
-            visitorScore++
-            visitorScoreText.text = visitorScore.toString()
+            addPointsToScore(1, isLocal = false)
+        }
+
+        binding.visitorTwoPointsButton.setOnClickListener {
+            addPointsToScore(2, isLocal = false)
         }
 
         binding.restartButton.setOnClickListener {
             localScore = 0
             visitorScore = 0
-            visitorScoreText.text = localScore.toString()
-            localScoreText.text = visitorScore.toString()
+            binding.visitorScoreText.text = localScore.toString()
+            binding.localScoreText.text = visitorScore.toString()
         }
 
         binding.resultsButton.setOnClickListener {
             startScoreActivity()
+        }
+    }
+
+    private fun addPointsToScore(points: Int, isLocal: Boolean) {
+        if (isLocal) {
+            localScore += points
+            binding.localScoreText.text = localScore.toString()
+        } else {
+            visitorScore += points
+            binding.visitorScoreText.text = visitorScore.toString()
         }
     }
 

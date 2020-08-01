@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Basketball Score</string>
     <string name="minus_one" translatable="false">-1</string>
     <string name="plus_one" translatable="false">+1</string>
+    <string name="plus_two" translatable="false">+2</string>
     <string name="local" translatable="false">Local</string>
     <string name="visitor">Visitor</string>
     <string name="zero" translatable="false">0</string>
