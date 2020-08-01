@@ -5,4 +5,9 @@
     <string name="local">Local</string>
     <string name="visitor">Visitor</string>
     <string name="zero">0</string>
+    <string name="local_vs_visitor">Local - Visitor</string>
+    <string name="local_won">Local won!</string>
+    <string name="visitor_won">Visitor won!</string>
+    <string name="local_visitor_score_format">%1$d - %2$d</string>
+    <string name="it_was_a_tie">It was a tie 😕</string>
 </resources>
