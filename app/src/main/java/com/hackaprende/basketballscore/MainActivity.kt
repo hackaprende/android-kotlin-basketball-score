@@ -3,7 +3,6 @@ package com.hackaprende.basketballscore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import com.hackaprende.basketballscore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupClickListeners()
+        setupButtons()
     }
 
-    private fun setupClickListeners() {
+    private fun setupButtons() {
         binding.localMinusButton.setOnClickListener {
             if (localScore > 0) {
                 localScore--
@@ -51,15 +50,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.restartButton.setOnClickListener {
-            localScore = 0
-            visitorScore = 0
-            binding.visitorScoreText.text = localScore.toString()
-            binding.localScoreText.text = visitorScore.toString()
+            resetScores()
         }
 
         binding.resultsButton.setOnClickListener {
             startScoreActivity()
         }
+    }
+
+    private fun resetScores() {
+        localScore = 0
+        visitorScore = 0
+        binding.visitorScoreText.text = localScore.toString()
+        binding.localScoreText.text = visitorScore.toString()
     }
 
     private fun addPointsToScore(points: Int, isLocal: Boolean) {
