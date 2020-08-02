@@ -1,13 +1,10 @@
-Basketball Score
+# Basketball Score
 Esta aplicación es parte del curso [Android Completo con Kotlin](https://hackaprende.com/pagina-de-inicio/cursos/android-completo-con-kotlin/)
 
-Con este ejercicio pondrás en práctica los siguientes temas sobre Android:
-- Views en Android.
-- Android Layouts.
-- Explicit intents: Como abrir otras activities.
-- Data Binding.
-- Recursos String.
-- Entre otros vistos en las primeras secciones del curso.
+Con este ejercicio aprenderás los siguientes temas sobre Android:
+- Entenderás el Activity lifecycle.
+- Conocerás qué es un ViewModel y cómo implementarlos.
+- Conocerás LiveData.
 
 Así luce la app terminada:
 ![Captura 1](screenshots/screen_1.png)
