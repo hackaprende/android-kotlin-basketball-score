@@ -28,38 +28,6 @@ class MainActivity : AppCompatActivity() {
             binding.visitorScoreText.text = it.toString()
         })
 
-        setupButtons()
-    }
-
-    private fun setupButtons() {
-        binding.localMinusButton.setOnClickListener {
-            viewModel.decreasePointsToLocal()
-        }
-
-        binding.localPlusButton.setOnClickListener {
-            viewModel.addPointsToLocal(1)
-        }
-
-        binding.localTwoPointsButton.setOnClickListener {
-            viewModel.addPointsToLocal(2)
-        }
-
-        binding.visitorMinusButton.setOnClickListener {
-            viewModel.decreasePointsToVisitor()
-        }
-
-        binding.visitorPlusButton.setOnClickListener {
-            viewModel.addPointsToVisitor(1)
-        }
-
-        binding.visitorTwoPointsButton.setOnClickListener {
-            viewModel.addPointsToVisitor(2)
-        }
-
-        binding.restartButton.setOnClickListener {
-            viewModel.resetScores()
-        }
-
         binding.resultsButton.setOnClickListener {
             startScoreActivity()
         }

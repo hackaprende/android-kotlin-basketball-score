@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.hackaprende.basketballscore.MainViewModel" />
@@ -26,6 +27,7 @@
                 android:id="@+id/restart_button"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:onClick="@{() -> viewModel.resetScores()}"
                 android:padding="16dp"
                 android:src="@drawable/ic_restore_black" />
 
@@ -89,6 +91,7 @@
                 android:id="@+id/local_minus_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.decreasePointsToLocal()}"
                 android:text="@string/minus_one"
                 android:textSize="24sp" />
 
@@ -112,6 +115,7 @@
                     android:id="@+id/local_plus_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.addPointsToLocal(1)}"
                     android:text="@string/plus_one"
                     android:textSize="24sp" />
 
@@ -119,6 +123,7 @@
                     android:id="@+id/local_two_points_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.addPointsToLocal(2)}"
                     android:text="@string/plus_two"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -139,6 +144,7 @@
                 android:id="@+id/visitor_minus_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.decreasePointsToVisitor()}"
                 android:text="@string/minus_one"
                 android:textSize="24sp" />
 
@@ -162,6 +168,7 @@
                     android:id="@+id/visitor_plus_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.addPointsToVisitor(1)}"
                     android:text="@string/plus_one"
                     android:textSize="24sp" />
 
@@ -169,6 +176,7 @@
                     android:id="@+id/visitor_two_points_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.addPointsToVisitor(2)}"
                     android:text="@string/plus_two"
                     android:textSize="24sp" />
             </LinearLayout>
